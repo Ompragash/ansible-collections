@@ -17,25 +17,25 @@
 ## Create pulp_ansible.yml with the below contents
 
 ```
-   ---
-   - hosts: all
-     vars:
-       pulp_settings:
-         secret_key: secret
-         ansible_api_hostname: 'http://localhost:24817'
-         ansible_ansible_content_hostname: 'http://localhost:24816/pulp/content'
-       pulp_default_admin_password: password
-       pulp_install_plugins:
-         pulp-ansible:
-           app_label: "ansible"
-     roles:
-       - pulp-database
-       - pulp-workers
-       - pulp-resource-manager
-       - pulp-webserver
-       - pulp-content
-     environment:
-       DJANGO_SETTINGS_MODULE: pulpcore.app.settings
+---
+- hosts: all
+  vars:
+    pulp_settings:
+      secret_key: secret
+      ansible_api_hostname: 'http://localhost:24817'
+      ansible_ansible_content_hostname: 'http://localhost:24816/pulp/content'
+    pulp_default_admin_password: password
+    pulp_install_plugins:
+      pulp-ansible:
+        app_label: "ansible"
+  roles:
+    - pulp-database
+    - pulp-workers
+    - pulp-resource-manager
+    - pulp-webserver
+    - pulp-content
+  environment:
+    DJANGO_SETTINGS_MODULE: pulpcore.app.settings
 ```
 
 ## Run pulp_ansible.yml playbook to deploy pulp_ansible

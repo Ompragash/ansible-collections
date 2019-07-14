@@ -1,6 +1,5 @@
 ---
-- hosts: localhost
-  connection: local
+- hosts: all
   vars:
     pulp_settings:
       secret_key: secret

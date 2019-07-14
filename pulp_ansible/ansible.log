@@ -1,0 +1,242 @@
+2019-07-14 12:08:36,442 p=8972 u=root |  - extracting geerlingguy.postgresql to /root/.ansible/roles/geerlingguy.postgresql
+2019-07-14 12:08:36,454 p=8972 u=root |  - geerlingguy.postgresql (master) was installed successfully
+2019-07-14 12:08:59,082 p=8989 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note
+that the implicit localhost does not match 'all'
+
+2019-07-14 12:08:59,579 p=8989 u=root |  PLAY [localhost] ***************************************************************
+2019-07-14 12:08:59,623 p=8989 u=root |  TASK [Gathering Facts] *********************************************************
+2019-07-14 12:09:00,503 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:09:00,514 p=8989 u=root |  TASK [pulp : Fail when pulp_secret_key is not set] *****************************
+2019-07-14 12:09:00,531 p=8989 u=root |  ok: [localhost] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2019-07-14 12:09:00,541 p=8989 u=root |  TASK [pulp : Load OS specific variables] ***************************************
+2019-07-14 12:09:00,556 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:09:00,566 p=8989 u=root |  TASK [pulp : Update apt package index] *****************************************
+2019-07-14 12:09:00,579 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:09:00,590 p=8989 u=root |  TASK [pulp : Install EPEL Release] *********************************************
+2019-07-14 12:09:00,604 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:09:00,613 p=8989 u=root |  TASK [pulp : Install prerequisites] ********************************************
+2019-07-14 12:09:17,449 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:09:17,464 p=8989 u=root |  TASK [pulp : Install prerequisites (Fedora 30+ only)] **************************
+2019-07-14 12:09:23,640 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:09:23,651 p=8989 u=root |  TASK [pulp : Disable SELinux (Pulp 3 is currently incompatible with SELinux)] ***
+2019-07-14 12:09:24,355 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:09:24,366 p=8989 u=root |  TASK [pulp : Find the nologin executable] **************************************
+2019-07-14 12:09:24,717 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:09:24,730 p=8989 u=root |  TASK [pulp : Create user pulp] *************************************************
+2019-07-14 12:09:25,553 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:09:25,563 p=8989 u=root |  TASK [pulp : Create cache dir for Pulp] ****************************************
+2019-07-14 12:09:25,940 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:09:25,951 p=8989 u=root |  TASK [pulp : Create pulp install dir] ******************************************
+2019-07-14 12:09:26,150 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:09:26,160 p=8989 u=root |  TASK [pulp : Install packages needed for source install] ***********************
+2019-07-14 12:09:45,709 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:09:45,730 p=8989 u=root |  TASK [pulp : Allow use system-wide packages] ***********************************
+2019-07-14 12:09:45,818 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:09:45,840 p=8989 u=root |  TASK [pulp : Install the psycopg python package] *******************************
+2019-07-14 12:09:50,741 p=8989 u=root |   [WARNING]: Module remote_tmp /var/lib/pulp/.ansible/tmp did not exist and was
+created with a mode of 0700, this may cause issues when running as another
+user. To avoid this, create the remote_tmp dir with the correct permissions
+manually
+
+2019-07-14 12:09:50,741 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:09:50,751 p=8989 u=root |  TASK [pulp : Install the mysqlclient python package] ***************************
+2019-07-14 12:09:50,813 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:09:50,821 p=8989 u=root |  TASK [pulp : Install pulpcore package from source] *****************************
+2019-07-14 12:09:50,836 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:09:50,845 p=8989 u=root |  TASK [pulp : Install pulpcore-plugin package from source] **********************
+2019-07-14 12:09:50,860 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:09:50,869 p=8989 u=root |  TASK [pulp : Install Pulp plugins via PyPI] ************************************
+2019-07-14 12:10:08,719 p=8989 u=root |  changed: [localhost] => (item={'key': 'pulp-ansible', 'value': {'app_label': 'ansible'}})
+2019-07-14 12:10:08,735 p=8989 u=root |  TASK [pulp : Install Pulp plugins from source] *********************************
+2019-07-14 12:10:08,759 p=8989 u=root |  skipping: [localhost] => (item={'key': 'pulp-ansible', 'value': {'app_label': 'ansible'}}) 
+2019-07-14 12:10:08,770 p=8989 u=root |  TASK [pulp : Set database defaults if not provided] ****************************
+2019-07-14 12:10:08,787 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:08,796 p=8989 u=root |  TASK [pulp : Create configuration directory for Pulp] **************************
+2019-07-14 12:10:08,994 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:09,005 p=8989 u=root |  TASK [pulp : Create configuration file for Pulp] *******************************
+2019-07-14 12:10:09,665 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:09,675 p=8989 u=root |  TASK [pulp : Install gunicorn] *************************************************
+2019-07-14 12:10:10,616 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:10,626 p=8989 u=root |  TASK [pulp : Install pulp-api service files] ***********************************
+2019-07-14 12:10:10,992 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:11,002 p=8989 u=root |  TASK [pulp-database : Load OS specific variables] ******************************
+2019-07-14 12:10:11,020 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:11,030 p=8989 u=root |  TASK [pulp-database : Install SCL package] *************************************
+2019-07-14 12:10:11,050 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:10:11,060 p=8989 u=root |  TASK [pulp-database : Set listen addresses] ************************************
+2019-07-14 12:10:11,080 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:10:11,091 p=8989 u=root |  TASK [geerlingguy.postgresql : include_tasks] **********************************
+2019-07-14 12:10:11,126 p=8989 u=root |  included: /root/.ansible/roles/geerlingguy.postgresql/tasks/variables.yml for localhost
+2019-07-14 12:10:11,141 p=8989 u=root |  TASK [geerlingguy.postgresql : Include OS-specific variables (Debian).] ********
+2019-07-14 12:10:11,161 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:10:11,171 p=8989 u=root |  TASK [geerlingguy.postgresql : Include OS-specific variables (RedHat).] ********
+2019-07-14 12:10:11,191 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:10:11,201 p=8989 u=root |  TASK [geerlingguy.postgresql : Include OS-specific variables (RedHat).] ********
+2019-07-14 12:10:11,222 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:10:11,233 p=8989 u=root |  TASK [geerlingguy.postgresql : Include OS-specific variables (Fedora).] ********
+2019-07-14 12:10:11,259 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:11,268 p=8989 u=root |  TASK [geerlingguy.postgresql : Define postgresql_packages.] ********************
+2019-07-14 12:10:11,294 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:11,303 p=8989 u=root |  TASK [geerlingguy.postgresql : Define postgresql_version.] *********************
+2019-07-14 12:10:11,327 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:11,338 p=8989 u=root |  TASK [geerlingguy.postgresql : Define postgresql_daemon.] **********************
+2019-07-14 12:10:11,362 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:11,372 p=8989 u=root |  TASK [geerlingguy.postgresql : Define postgresql_data_dir.] ********************
+2019-07-14 12:10:11,396 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:11,407 p=8989 u=root |  TASK [geerlingguy.postgresql : Define postgresql_bin_path.] ********************
+2019-07-14 12:10:11,431 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:11,441 p=8989 u=root |  TASK [geerlingguy.postgresql : Define postgresql_config_path.] *****************
+2019-07-14 12:10:11,465 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:11,475 p=8989 u=root |  TASK [geerlingguy.postgresql : include_tasks] **********************************
+2019-07-14 12:10:11,508 p=8989 u=root |  included: /root/.ansible/roles/geerlingguy.postgresql/tasks/setup-RedHat.yml for localhost
+2019-07-14 12:10:11,528 p=8989 u=root |  TASK [geerlingguy.postgresql : Ensure PostgreSQL packages are installed.] ******
+2019-07-14 12:10:23,512 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:23,535 p=8989 u=root |  TASK [geerlingguy.postgresql : Ensure PostgreSQL Python libraries are installed.] ***
+2019-07-14 12:10:27,514 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:27,524 p=8989 u=root |  TASK [geerlingguy.postgresql : include_tasks] **********************************
+2019-07-14 12:10:27,546 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:10:27,555 p=8989 u=root |  TASK [geerlingguy.postgresql : include_tasks] **********************************
+2019-07-14 12:10:27,588 p=8989 u=root |  included: /root/.ansible/roles/geerlingguy.postgresql/tasks/initialize.yml for localhost
+2019-07-14 12:10:27,609 p=8989 u=root |  TASK [geerlingguy.postgresql : Set PostgreSQL environment variables.] **********
+2019-07-14 12:10:27,975 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:27,985 p=8989 u=root |  TASK [geerlingguy.postgresql : Ensure PostgreSQL data directory exists.] *******
+2019-07-14 12:10:28,185 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:28,195 p=8989 u=root |  TASK [geerlingguy.postgresql : Check if PostgreSQL database is initialized.] ***
+2019-07-14 12:10:28,385 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:28,395 p=8989 u=root |  TASK [geerlingguy.postgresql : Ensure PostgreSQL database is initialized.] *****
+2019-07-14 12:10:30,379 p=8989 u=root |   [WARNING]: Module remote_tmp /var/lib/pgsql/.ansible/tmp did not exist and was
+created with a mode of 0700, this may cause issues when running as another
+user. To avoid this, create the remote_tmp dir with the correct permissions
+manually
+
+2019-07-14 12:10:30,379 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:30,389 p=8989 u=root |  TASK [geerlingguy.postgresql : include_tasks] **********************************
+2019-07-14 12:10:30,421 p=8989 u=root |  included: /root/.ansible/roles/geerlingguy.postgresql/tasks/configure.yml for localhost
+2019-07-14 12:10:30,445 p=8989 u=root |  TASK [geerlingguy.postgresql : Configure global settings.] *********************
+2019-07-14 12:10:30,806 p=8989 u=root |  changed: [localhost] => (item={'option': 'unix_socket_directories', 'value': '/var/run/postgresql'})
+2019-07-14 12:10:30,816 p=8989 u=root |  TASK [geerlingguy.postgresql : Configure host based authentication (if entries are configured).] ***
+2019-07-14 12:10:30,832 p=8989 u=root |  [DEPRECATION WARNING]: evaluating postgresql_hba_entries as a bare variable, 
+this behaviour will go away and you might need to add |bool to the expression 
+in the future. Also see CONDITIONAL_BARE_VARS configuration toggle.. This 
+feature will be removed in version 2.12. Deprecation warnings can be disabled 
+by setting deprecation_warnings=False in ansible.cfg.
+2019-07-14 12:10:31,259 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:31,269 p=8989 u=root |  TASK [geerlingguy.postgresql : Ensure PostgreSQL unix socket dirs exist.] ******
+2019-07-14 12:10:31,481 p=8989 u=root |  changed: [localhost] => (item=/var/run/postgresql)
+2019-07-14 12:10:31,492 p=8989 u=root |  TASK [geerlingguy.postgresql : Ensure PostgreSQL is started and enabled on boot.] ***
+2019-07-14 12:10:32,565 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:32,576 p=8989 u=root |  TASK [geerlingguy.postgresql : Ensure PostgreSQL users are present.] ***********
+2019-07-14 12:10:33,009 p=8989 u=root |  changed: [localhost] => (item=None)
+2019-07-14 12:10:33,010 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:33,021 p=8989 u=root |  TASK [geerlingguy.postgresql : Ensure PostgreSQL databases are present.] *******
+2019-07-14 12:10:33,665 p=8989 u=root |  changed: [localhost] => (item={'name': 'pulp', 'owner': 'pulp'})
+2019-07-14 12:10:33,676 p=8989 u=root |  TASK [pulp-database : MySQL/Maria install not implemented] *********************
+2019-07-14 12:10:33,694 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:10:33,695 p=8989 u=root |  RUNNING HANDLER [pulp : Restart pulp-api.service] ******************************
+2019-07-14 12:10:34,530 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:34,531 p=8989 u=root |  RUNNING HANDLER [pulp : Collect static content] ********************************
+2019-07-14 12:10:37,506 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:37,507 p=8989 u=root |  RUNNING HANDLER [pulp : Restart pulp-api.service] ******************************
+2019-07-14 12:10:38,252 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:38,254 p=8989 u=root |  RUNNING HANDLER [geerlingguy.postgresql : restart postgresql] ******************
+2019-07-14 12:10:38,320 p=8989 u=root |   [WARNING]: Ignoring "sleep" as it is not used in "systemd"
+
+2019-07-14 12:10:39,082 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:39,102 p=8989 u=root |  TASK [pulp-database : Get the exact pulpcore install dir] **********************
+2019-07-14 12:10:39,783 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:39,801 p=8989 u=root |  TASK [pulp-database : Assert the pulpcore install dir was found] ***************
+2019-07-14 12:10:39,841 p=8989 u=root |  ok: [localhost] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2019-07-14 12:10:39,859 p=8989 u=root |  TASK [pulp-database : Create the pulpcore migrations directory] ****************
+2019-07-14 12:10:40,363 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:40,384 p=8989 u=root |  TASK [pulp-database : Create the plugin migrations directories] ****************
+2019-07-14 12:10:40,890 p=8989 u=root |  changed: [localhost] => (item=pulp-ansible)
+2019-07-14 12:10:40,901 p=8989 u=root |  TASK [pulp-database : Create database migrations for plugins] ******************
+2019-07-14 12:10:42,630 p=8989 u=root |  ok: [localhost] => (item=pulp-ansible)
+2019-07-14 12:10:42,640 p=8989 u=root |  TASK [pulp-database : Run database auth migrations] ****************************
+2019-07-14 12:10:44,496 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:44,506 p=8989 u=root |  TASK [pulp-database : Run database migrations] *********************************
+2019-07-14 12:10:46,915 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:46,924 p=8989 u=root |  TASK [pulp-database : Set the Pulp admin user's password] **********************
+2019-07-14 12:10:48,647 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:10:48,658 p=8989 u=root |  TASK [pulp-redis : Load OS specific variables] *********************************
+2019-07-14 12:10:48,674 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:10:48,683 p=8989 u=root |  TASK [pulp-redis : Add redis repository] ***************************************
+2019-07-14 12:10:48,698 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:10:48,706 p=8989 u=root |  TASK [pulp-redis : Install requirements] ***************************************
+2019-07-14 12:10:52,598 p=8989 u=root |  ok: [localhost] => (item=python3)
+2019-07-14 12:10:56,407 p=8989 u=root |  ok: [localhost] => (item=python3-devel)
+2019-07-14 12:10:56,418 p=8989 u=root |  TASK [pulp-redis : Install Redis] **********************************************
+2019-07-14 12:11:05,474 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:05,484 p=8989 u=root |  TASK [pulp-redis : Start Redis] ************************************************
+2019-07-14 12:11:06,295 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:06,305 p=8989 u=root |  TASK [pulp-workers : Install service files] ************************************
+2019-07-14 12:11:06,679 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:06,687 p=8989 u=root |  TASK [pulp-workers : Set states of pulp workers] *******************************
+2019-07-14 12:11:07,536 p=8989 u=root |  changed: [localhost] => (item={'key': 1, 'value': {'state': 'started', 'enabled': True}})
+2019-07-14 12:11:09,060 p=8989 u=root |  changed: [localhost] => (item={'key': 2, 'value': {'state': 'started', 'enabled': True}})
+2019-07-14 12:11:09,101 p=8989 u=root |  TASK [pulp-resource-manager : Install service files] ***************************
+2019-07-14 12:11:10,259 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:10,293 p=8989 u=root |  TASK [pulp-resource-manager : Set the pulp-resource-manager service state] *****
+2019-07-14 12:11:12,073 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:12,119 p=8989 u=root |  TASK [pulp-webserver : Create nginx user] **************************************
+2019-07-14 12:11:12,172 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:11:12,206 p=8989 u=root |  TASK [pulp-webserver : Find site-packages directory] ***************************
+2019-07-14 12:11:13,402 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:11:13,422 p=8989 u=root |  TASK [pulp-webserver : Assert one directory has been found] ********************
+2019-07-14 12:11:13,465 p=8989 u=root |  ok: [localhost] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2019-07-14 12:11:13,486 p=8989 u=root |  TASK [pulp-webserver : Set fact referencing Pulp's static files directory] *****
+2019-07-14 12:11:13,524 p=8989 u=root |  ok: [localhost]
+2019-07-14 12:11:13,546 p=8989 u=root |  TASK [pulp-webserver : Install Nginx] ******************************************
+2019-07-14 12:11:24,543 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:24,558 p=8989 u=root |  TASK [pulp-webserver : Install Nginx configuration file] ***********************
+2019-07-14 12:11:25,092 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:25,102 p=8989 u=root |  TASK [pulp-webserver : Start and enable Nginx] *********************************
+2019-07-14 12:11:26,050 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:26,066 p=8989 u=root |  TASK [pulp-webserver : Install firewalld] **************************************
+2019-07-14 12:11:37,764 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:37,774 p=8989 u=root |  TASK [pulp-webserver : Start and enable firewalld] *****************************
+2019-07-14 12:11:38,713 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:38,750 p=8989 u=root |  TASK [pulp-webserver : Accept connections on port 80] **************************
+2019-07-14 12:11:39,777 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:39,787 p=8989 u=root |  TASK [pulp-webserver : Find site-packages directory] ***************************
+2019-07-14 12:11:39,803 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:11:39,813 p=8989 u=root |  TASK [pulp-webserver : Assert one directory has been found] ********************
+2019-07-14 12:11:39,828 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:11:39,838 p=8989 u=root |  TASK [pulp-webserver : Set fact referencing Pulp's static files directory] *****
+2019-07-14 12:11:39,853 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:11:39,863 p=8989 u=root |  TASK [pulp-webserver : Install Apache] *****************************************
+2019-07-14 12:11:39,878 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:11:39,889 p=8989 u=root |  TASK [pulp-webserver : Install Apache configuration file] **********************
+2019-07-14 12:11:39,904 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:11:39,915 p=8989 u=root |  TASK [pulp-webserver : Start and enable Apache] ********************************
+2019-07-14 12:11:39,930 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:11:39,941 p=8989 u=root |  TASK [pulp-webserver : Install firewalld] **************************************
+2019-07-14 12:11:39,956 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:11:39,966 p=8989 u=root |  TASK [pulp-webserver : Start and enable firewalld] *****************************
+2019-07-14 12:11:39,982 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:11:39,992 p=8989 u=root |  TASK [pulp-webserver : Accept connections on port 80] **************************
+2019-07-14 12:11:40,007 p=8989 u=root |  skipping: [localhost]
+2019-07-14 12:11:40,017 p=8989 u=root |  TASK [pulp-content : Install pulp-content-app service file] ********************
+2019-07-14 12:11:40,398 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:40,409 p=8989 u=root |  TASK [pulp-content : Set state of pulp content app] ****************************
+2019-07-14 12:11:41,282 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:41,283 p=8989 u=root |  RUNNING HANDLER [pulp-workers : Reload systemd and restart pulp workers] *******
+2019-07-14 12:11:42,712 p=8989 u=root |  changed: [localhost] => (item={'key': 1, 'value': {'state': 'started', 'enabled': True}})
+2019-07-14 12:11:44,878 p=8989 u=root |  changed: [localhost] => (item={'key': 2, 'value': {'state': 'started', 'enabled': True}})
+2019-07-14 12:11:44,890 p=8989 u=root |  RUNNING HANDLER [pulp-resource-manager : Restart pulp-resource-manager] ********
+2019-07-14 12:11:47,994 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:47,997 p=8989 u=root |  RUNNING HANDLER [pulp-webserver : reload nginx] ********************************
+2019-07-14 12:11:50,366 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:50,369 p=8989 u=root |  RUNNING HANDLER [pulp-content : Reload systemd and restart pulp content app] ***
+2019-07-14 12:11:52,942 p=8989 u=root |  changed: [localhost]
+2019-07-14 12:11:52,951 p=8989 u=root |  PLAY RECAP *********************************************************************
+2019-07-14 12:11:52,952 p=8989 u=root |  localhost                  : ok=77   changed=48   unreachable=0    failed=0    skipped=25   rescued=0    ignored=0   

@@ -16,8 +16,7 @@
 
 ## Create pulp_ansible.yml with the below contents
 
-.. code-block:: yaml
-
+```
    ---
    - hosts: all
      vars:
@@ -37,17 +36,17 @@
        - pulp-content
      environment:
        DJANGO_SETTINGS_MODULE: pulpcore.app.settings
+```
 
 ## Run pulp_ansible.yml playbook to deploy pulp_ansible
 
-.. code-block:: bash
-
+```
     ansible-playbook pulp_ansible.yml
+```
 
 ## Check pulp_ansible status
 
-.. code-block:: bash
-
+```
     http http://localhost/pulp/api/v3/status/
-
+```
 additionally you can also run ```systemctl --all | grep pulp``` to check for all pulp services.

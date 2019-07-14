@@ -50,3 +50,12 @@
     http http://localhost/pulp/api/v3/status/
 ```
 additionally you can also run ```systemctl --all | grep pulp``` to check for all pulp services.
+
+## Configure ~/.netrc and it can be used by "http" utility for basic authentication
+
+```
+# vim ~/.netrc
+machine localhost
+login username
+password password
+```
